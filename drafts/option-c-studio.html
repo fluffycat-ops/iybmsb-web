@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>IYBMSB — Independent mobile game studio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<style>
+:root{
+  --bg:#fbfaf7; --fg:#181613; --muted:#6c675f; --line:#e7e3db;
+  --accent:#e8452a; --ink2:#211f1b;
+  --disp:"Fraunces",Georgia,serif; --body:"Inter",system-ui,sans-serif;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--body);line-height:1.65}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1080px;margin:0 auto;padding:0 28px}
+/* header */
+header{border-bottom:1px solid var(--line)}
+.bar{display:flex;align-items:center;justify-content:space-between;height:74px}
+.logo{font-family:var(--disp);font-weight:600;font-size:1.35rem;letter-spacing:-.01em}
+nav a{margin-left:28px;color:var(--muted);font-size:.95rem}
+nav a:hover{color:var(--fg)}
+/* hero — oversized wordmark */
+.hero{padding:80px 0 40px}
+.eyebrow{font-size:.8rem;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);font-weight:600;margin:0 0 26px}
+.mark{font-family:var(--disp);font-weight:600;font-size:clamp(3.4rem,13vw,9.5rem);line-height:.9;letter-spacing:-.02em;margin:0}
+.mark .dot{color:var(--accent)}
+.lead{display:grid;grid-template-columns:1fr 1fr;gap:40px;margin-top:34px;align-items:end}
+.lead p{font-size:1.25rem;color:var(--muted);max-width:40ch;margin:0}
+.lead .actions{display:flex;gap:14px;flex-wrap:wrap;justify-content:flex-end}
+.btn{padding:12px 22px;border-radius:2px;font-weight:500;font-size:.95rem;border:1px solid var(--fg)}
+.btn.pri{background:var(--fg);color:var(--bg)}
+.btn.pri:hover{background:var(--accent);border-color:var(--accent)}
+.btn.sec:hover{background:var(--fg);color:var(--bg)}
+/* shelf */
+.sec{padding:72px 0;border-top:1px solid var(--line)}
+.lbl{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:38px;flex-wrap:wrap;gap:8px}
+.lbl h2{font-family:var(--disp);font-weight:600;font-size:2rem;margin:0}
+.lbl span{color:var(--muted);font-size:.9rem}
+.shelf{display:grid;grid-template-columns:1fr 1fr;gap:56px}
+.title{display:grid;grid-template-columns:150px 1fr;gap:26px;align-items:start}
+/* device frame */
+.device{width:150px;height:310px;border-radius:26px;background:var(--ink2);padding:9px;box-shadow:0 20px 40px rgba(0,0,0,.14)}
+.dscreen{width:100%;height:100%;border-radius:19px;overflow:hidden;display:flex;flex-direction:column;justify-content:space-between;padding:18px 14px;color:#fff}
+.d-ghant{background:linear-gradient(160deg,#2b6e6b,#123b3a)}
+.d-bruk{background:linear-gradient(160deg,#e8452a,#f59a2b)}
+.dtop{font-family:var(--disp);font-size:1.4rem;font-weight:600}
+.dmid{font-size:.72rem;opacity:.85;line-height:1.5}
+.dbot{font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;opacity:.7}
+.title h3{font-family:var(--disp);font-weight:600;font-size:1.7rem;margin:0 0 4px}
+.title .cat{color:var(--accent);font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;font-weight:600;margin:0 0 12px}
+.title p{color:var(--muted);margin:0 0 16px}
+.title ul{list-style:none;padding:0;margin:0 0 18px;display:flex;gap:16px;flex-wrap:wrap}
+.title li{font-size:.85rem;color:var(--muted);position:relative;padding-left:14px}
+.title li::before{content:"";position:absolute;left:0;top:9px;width:5px;height:5px;border-radius:50%;background:var(--accent)}
+.title a.store{font-size:.9rem;font-weight:500;border-bottom:1px solid var(--line);padding-bottom:2px;margin-right:18px}
+.title a.store:hover{border-color:var(--accent);color:var(--accent)}
+/* about */
+.about{display:grid;grid-template-columns:180px 1fr;gap:40px}
+.about h2{font-family:var(--disp);font-weight:600;font-size:1.6rem;margin:0}
+.about p{font-size:1.15rem;color:var(--muted);max-width:58ch;margin:0 0 16px}
+/* contact */
+.contact{padding:80px 0}
+.contact h2{font-family:var(--disp);font-weight:600;font-size:clamp(2rem,5vw,3rem);margin:0 0 10px;max-width:16ch}
+.contact a.mail{font-size:1.3rem;color:var(--accent);border-bottom:2px solid var(--accent);padding-bottom:2px}
+footer{border-top:1px solid var(--line);padding:30px 0;color:var(--muted);font-size:.9rem;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+@media(max-width:820px){.lead,.shelf,.about{grid-template-columns:1fr}.lead .actions{justify-content:flex-start}nav{display:none}}
+</style>
+</head>
+<body>
+<header><div class="wrap bar">
+  <span class="logo">IYBMSB</span>
+  <nav><a href="#games">Games</a><a href="#about">Studio</a><a href="#contact">Contact</a></nav>
+</div></header>
+
+<main class="wrap">
+  <section class="hero">
+    <p class="eyebrow">Independent mobile game studio</p>
+    <h1 class="mark">IYBMSB<span class="dot">.</span></h1>
+    <div class="lead">
+      <p>We design social mobile games meant to be played together — in the same room, out loud.</p>
+      <div class="actions">
+        <a class="btn pri" href="#games">Our games</a>
+        <a class="btn sec" href="#contact">Get in touch</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="games">
+    <div class="lbl"><h2>Now playing</h2><span>Two titles · more in development</span></div>
+    <div class="shelf">
+      <article class="title">
+        <div class="device"><div class="dscreen d-ghant">
+          <div class="dtop">Ghant</div>
+          <div class="dmid">Round 3 of 5<br>Pass the phone →<br>0:12 left</div>
+          <div class="dbot">5 players · live</div>
+        </div></div>
+        <div>
+          <p class="cat">Card party</p>
+          <h3>Ghant</h3>
+          <p>The self-running party card game. Start a room, pass the phone, and let the timer keep the night moving.</p>
+          <ul><li>2–8 players</li><li>Local rooms</li><li>No sign-up</li></ul>
+          <a class="store" href="#">App Store</a><a class="store" href="#">Google Play</a>
+        </div>
+      </article>
+      <article class="title">
+        <div class="device"><div class="dscreen d-bruk">
+          <div class="dtop">Bruk It Up</div>
+          <div class="dmid">Round 2<br>Move to the riddim<br>Guess the step</div>
+          <div class="dbot">Party mode</div>
+        </div></div>
+        <div>
+          <p class="cat">Dance party</p>
+          <h3>Bruk It Up</h3>
+          <p>A move-and-guess dance party game that gets the whole room off the couch. Feel the riddim.</p>
+          <ul><li>3+ players</li><li>Music-driven</li><li>Party mode</li></ul>
+          <a class="store" href="#">App Store</a><a class="store" href="#">Google Play</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="sec" id="about">
+    <div class="about">
+      <h2>The studio</h2>
+      <div>
+        <p>IYBMSB LLC is a small independent studio building mobile games for people in the same place at the same time. We care about games that need no manual and start in seconds.</p>
+        <p>[Replace with your real studio story — who you are, where you're based, what you're building next.]</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <h2>Press, partnerships, or a hello.</h2>
+    <a class="mail" href="mailto:hello@iybmsb.com">hello@iybmsb.com</a>
+  </section>
+</main>
+
+<footer class="wrap"><span>© 2026 IYBMSB LLC</span><span>Made to be played together.</span></footer>
+</body>
+</html>
